@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Destinations | Visit Lesotho</title>
+    <meta
+      name="description"
+      content="Search and filter every major tourist destination in Lesotho."
+    />
+    <script src="js/theme.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=Public+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/destinations.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Visit <span>Lesotho</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" href="destinations.html" aria-current="page"
+                  >Destinations</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="accommodation.html">Accommodation</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Explore by type</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="destinations.html?cat=Nature">Nature</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Heritage">Heritage</a>
+                  </li>
+                  <li><a class="dropdown-item" href="destinations.html?cat=Culture">Culture</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Adventure">Adventure</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <span id="navUser" class="badge text-bg-warning ms-lg-2 d-none"></span>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="themeBtn"
+                  class="btn btn-sm btn-outline-light ms-lg-3 my-2 my-lg-0"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Dark
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-title">
+        <div class="container">
+          <h1>Destinations</h1>
+          <p class="lead mb-0">
+            17 places across the highlands. Search, filter and save the ones you like.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-9">
+              <div class="toolbar mb-4">
+                <label class="visually-hidden" for="q">Search destinations</label
+                ><input
+                  id="q"
+                  type="search"
+                  class="form-control"
+                  placeholder="Search by name, district or keyword"
+                />
+                <div class="btn-group flex-wrap" id="cats" role="group" aria-label="Filter by type">
+                  <button type="button" class="btn btn-outline-primary active" data-cat="All">
+                    All</button
+                  ><button type="button" class="btn btn-outline-primary" data-cat="Nature">
+                    Nature</button
+                  ><button type="button" class="btn btn-outline-primary" data-cat="Heritage">
+                    Heritage</button
+                  ><button type="button" class="btn btn-outline-primary" data-cat="Culture">
+                    Culture</button
+                  ><button type="button" class="btn btn-outline-primary" data-cat="Adventure">
+                    Adventure
+                  </button>
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-secondary dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    type="button"
+                  >
+                    Sort
+                  </button>
+                  <ul class="dropdown-menu" id="sort">
+                    <li>
+                      <button class="dropdown-item" data-sort="az" type="button">Name A - Z</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" data-sort="za" type="button">Name Z - A</button>
+                    </li>
+                    <li>
+                      <button class="dropdown-item" data-sort="cat" type="button">By type</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p id="count" class="muted" aria-live="polite"></p>
+              <div id="grid" class="row g-4">
+            <div class="col-md-6 col-xl-4 dest-col" data-id="afriski" data-cat="Adventure" data-best="Jun - Aug for snow">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/afriski.jpg" alt="Afriski Mountain Resort" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-primary align-self-start mb-2">Adventure</span>
+                  <h2 class="h5">Afriski Mountain Resort</h2>
+                  <p class="small muted">Butha-Buthe</p>
+                  <p>Southern Africa's ski resort at roughly 3,050 m. Ski and snowboard in winter, mountain bike and hike in summer.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="afriski" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="afriski" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="bokong" data-cat="Nature" data-best="Oct - Apr">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/bokong nature reserve.jpg" alt="Bokong Nature Reserve" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Bokong Nature Reserve</h2>
+                  <p class="small muted">Leribe</p>
+                  <p>A high-altitude reserve near the Mafika-Lisiu Pass (about 3,090 m) with the Lepaqoa waterfall and a visitor centre.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="bokong" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="bokong" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="ha-baroana" data-cat="Heritage" data-best="Apr - Oct">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/baroana rock art.jpg" alt="Ha Baroana Rock Art" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-warning align-self-start mb-2">Heritage</span>
+                  <h2 class="h5">Ha Baroana Rock Art</h2>
+                  <p class="small muted">Maseru</p>
+                  <p>One of the finest San painting sites in Lesotho, showing eland and human figures on a sheltered rock face.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="ha-baroana" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="ha-baroana" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="ha-kome" data-cat="Culture" data-best="Year round">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/kome caves.webp" alt="Ha Kome Cave Dwellings" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-danger align-self-start mb-2">Culture</span>
+                  <h2 class="h5">Ha Kome Cave Dwellings</h2>
+                  <p class="small muted">Berea</p>
+                  <p>Families still live in houses built into sandstone overhangs, a tradition that goes back to the 1800s.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="ha-kome" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="ha-kome" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 dest-col" data-id="katse-dam" data-cat="Nature" data-best="Sep - May">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/katse dam.jpg" alt="Katse Dam" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Katse Dam</h2>
+                  <p class="small muted">Thaba-Tseka</p>
+                  <p>A 185 m arch dam in the Lesotho Highlands Water Project. Take the dam wall tour, then fish or boat on the lake.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="katse-dam" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="katse-dam" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 dest-col" data-id="liphofung" data-cat="Heritage" data-best="Year round">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/liphofung caves.jpg" alt="Liphofung Cave" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-warning align-self-start mb-2">Heritage</span>
+                  <h2 class="h5">Liphofung Cave</h2>
+                  <p class="small muted">Butha-Buthe</p>
+                  <p>A sandstone shelter with San rock art that King Moshoeshoe I once used. The cultural site has a small museum.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="liphofung" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="liphofung" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="malealea" data-cat="Culture" data-best="Sep - Apr">
+              <article class="card dest-card h-100">
+
+                <div class="dest-img">
+                  <img src="images/malealea landscape.png" alt="Malealea" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-danger align-self-start mb-2">Culture</span>
+                  <h2 class="h5">Malealea</h2>
+                  <p class="small muted">Mafeteng</p>
+                  <p>A village lodge and the starting point for pony treks through the Gates of Paradise Pass. Evenings feature the village choir.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="malealea" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="malealea" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="maletsunyane" data-cat="Nature" data-best="Dec - Mar, when the river is full">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/maletsunyane falls.jpg" alt="Maletsunyane Falls" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Maletsunyane Falls</h2>
+                  <p class="small muted">Semonkong, Maseru</p>
+                  <p>A 192 m single-drop waterfall in the Thaba-Putsoa range. Home of the world's longest commercial single-drop abseil.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="maletsunyane" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="maletsunyane" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="maseru" data-cat="Culture" data-best="Year round">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/maseru city.webp" alt="Maseru and the Basotho Hat" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-danger align-self-start mb-2">Culture</span>
+                  <h2 class="h5">Maseru and the Basotho Hat</h2>
+                  <p class="small muted">Maseru</p>
+                  <p>The capital city: craft markets, the Basotho Hat building, restaurants and the gateway to every route in the country.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="maseru" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="maseru" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="mohale-dam" data-cat="Nature" data-best="Sep - May">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/Mohale-Dam.webp" alt="Mohale Dam" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Mohale Dam</h2>
+                  <p class="small muted">Central Highlands</p>
+                  <p>A rockfill dam in a wide highland valley. Quiet viewpoints, fishing and sweeping mountain scenery.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="mohale-dam" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="mohale-dam" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="morija" data-cat="Culture" data-best="Late Sep - Oct for the festival">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/morija moseum and archives.jpg" alt="Morija Museum and Archives" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-danger align-self-start mb-2">Culture</span>
+                  <h2 class="h5">Morija Museum and Archives</h2>
+                  <p class="small muted">Maseru</p>
+                  <p>The oldest mission station in Lesotho (1833), with a museum, dinosaur footprints and the annual Morija Arts and Cultural Festival.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="morija" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="morija" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="qiloane" data-cat="Nature" data-best="Nov - Mar">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/qiloane falls.jpg" alt="Qiloane Falls" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Qiloane Falls</h2>
+                  <p class="small muted">Thaba-Bosiu area, Maseru</p>
+                  <p>A waterfall beside Qiloane hill, whose shape inspired the Basotho hat (mokorotlo). A short drive from Thaba-Bosiu.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="qiloane" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="qiloane" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="sani-pass" data-cat="Adventure" data-best="Year round; snow possible Jun - Aug">
+              <article class="card dest-card h-100">
+
+                <div class="dest-img">
+                  <img src="images/sani pass.jpg" alt="Sani Pass" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-primary align-self-start mb-2">Adventure</span>
+                  <h2 class="h5">Sani Pass</h2>
+                  <p class="small muted">Mokhotlong</p>
+                  <p>The highest road pass in southern Africa, a steep 4x4 route to the border with South Africa at about 2,876 m.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="sani-pass" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="sani-pass" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="sehlabathebe" data-cat="Nature" data-best="Sep - May">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/sehlabathebe.jpg" alt="Sehlabathebe National Park" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Sehlabathebe National Park</h2>
+                  <p class="small muted">Qacha's Nek</p>
+                  <p>Remote sandstone arches and rock pools, part of the Maloti-Drakensberg World Heritage Site. Good for trout fishing and quiet hiking.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="sehlabathebe" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="sehlabathebe" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="thaba-bosiu" data-cat="Heritage" data-best="Apr - Oct, cooler for the climb">
+              <article class="card dest-card h-100">
+              
+                <div class="dest-img">
+                  <img src="images/thaba-bosiu.webp" alt="Thaba-Bosiu" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-warning align-self-start mb-2">Heritage</span>
+                  <h2 class="h5">Thaba-Bosiu</h2>
+                  <p class="small muted">Maseru</p>
+                  <p>The flat-topped mountain fortress where King Moshoeshoe I founded the Basotho nation in 1824. Guided walks cover his grave and the old fortifications.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="thaba-bosiu" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="thaba-bosiu" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="thabana-ntlenyana" data-cat="Adventure" data-best="Oct - Mar">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/thabana ntlenyane.jpg" alt="Thabana Ntlenyana" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-primary align-self-start mb-2">Adventure</span>
+                  <h2 class="h5">Thabana Ntlenyana</h2>
+                  <p class="small muted">Mokhotlong</p>
+                  <p>At 3,482 m, the highest peak in southern Africa. A challenging multi-day hike or pony trek from Sani Top.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="thabana-ntlenyana" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="thabana-ntlenyana" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-xl-4 dest-col" data-id="tsehlanyane" data-cat="Nature" data-best="Oct - Apr">
+              <article class="card dest-card h-100">
+                <div class="dest-img">
+                  <img src="images/tsehlanyane.jpg" alt="Ts'ehlanyane National Park" loading="lazy" />
+                </div>
+                <div class="card-body">
+                  <span class="badge text-bg-success align-self-start mb-2">Nature</span>
+                  <h2 class="h5">Ts'ehlanyane National Park</h2>
+                  <p class="small muted">Butha-Buthe</p>
+                  <p>Indigenous forest, alpine meadows and bearded vultures. Hike, ride horses or camp beside clear mountain streams.</p>
+                  <div class="actions">
+                    <button class="btn btn-brand btn-sm" data-open="tsehlanyane" type="button">Details</button>
+                    <button class="btn btn-outline-danger btn-sm" data-fav="tsehlanyane" type="button" aria-pressed="false">Save</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            </div>
+              <div id="noResults" class="alert alert-warning" hidden>
+                No destinations match. Clear the search or choose All.
+              </div>
+              <nav id="pager" class="mt-4" aria-label="Destination pages"></nav>
+            </div>
+            <aside class="col-lg-3" aria-label="Saved destinations">
+              <div class="saved">
+                <h2 class="h5">Your saved places</h2>
+                <ul id="favList" class="list-unstyled mb-0"></ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <div
+        class="modal fade"
+        id="destModal"
+        tabindex="-1"
+        aria-labelledby="dmTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title h4" id="dmTitle"></h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-img">
+                <img id="dmImg" class="img-fluid rounded mb-3" alt="" />
+              </div>
+              <p id="dmDesc"></p>
+              <p class="mb-0">
+                <strong>Where:</strong> <span id="dmWhere"></span><br /><strong>Best time:</strong>
+                <span id="dmBest"></span>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button id="dmFav" class="btn btn-outline-danger" type="button"></button
+              ><a class="btn btn-straw" href="contact.html">Plan a visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="blanket"></div>
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <h2 class="h4 text-white">Visit Lesotho</h2>
+            <p>
+              The Kingdom in the Sky. Plan your trip to the only country in the world entirely above
+              1,000 m.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 class="h6 text-white">Pages</h3>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="accommodation.html">Accommodation</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h3 class="h6 text-white">Contact</h3>
+            <address class="mb-0">
+              Tourism Information Office<br />Kingsway Road, Maseru 100<br /><a>
+
+            </address>
+          </div>
+        </div>
+        <p class="small mt-4 mb-0">
+          &copy; <span id="year"></span> Visit Lesotho.</p>
+      </div>
+    </footer>
+    <button id="toTop" class="btn btn-straw" type="button" aria-label="Back to top" hidden>
+      Top
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/destinations.js"></script>
+  </body>
+</html>

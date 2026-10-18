@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery | Visit Lesotho</title>
+    <meta
+      name="description"
+      content="Photo gallery of the best-known places in Lesotho with a lightbox viewer."
+    />
+    <script src="js/theme.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=Public+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/gallery.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Header and navigation -->
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Visit <span>Lesotho</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="accommodation.html">Accommodation</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" href="gallery.html" aria-current="page">Gallery</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Explore by type</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="destinations.html?cat=Nature">Nature</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Heritage">Heritage</a>
+                  </li>
+                  <li><a class="dropdown-item" href="destinations.html?cat=Culture">Culture</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Adventure">Adventure</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <span id="navUser" class="badge text-bg-warning ms-lg-2 d-none"></span>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="themeBtn"
+                  class="btn btn-sm btn-outline-light ms-lg-3 my-2 my-lg-0"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Dark
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+       <main id="main">
+      <section class="page-title">
+        <div class="container">
+          <h1>Photo gallery</h1>
+          <p class="lead mb-0">
+            Click any picture to open the viewer. Use the arrow keys to move through them.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div
+            class="d-flex flex-wrap gap-2 mb-4"
+            id="gFilter"
+            role="group"
+            aria-label="Filter photos"
+          >
+            <button class="btn btn-brand active" data-cat="All" type="button">All</button
+            ><button class="btn btn-outline-secondary" data-cat="Nature" type="button">
+              Nature</button
+            ><button class="btn btn-outline-secondary" data-cat="Heritage" type="button">
+              Heritage</button
+            ><button class="btn btn-outline-secondary" data-cat="Culture" type="button">
+              Culture</button
+            ><button class="btn btn-outline-secondary" data-cat="Adventure" type="button">
+              Adventure
+            </button>
+          </div>
+          <div class="gallery">
+            <figure class="g-item wide" data-cat="Nature">
+              <button type="button" class="g-btn" aria-label="Open Maletsunyane Falls photo">
+                <img
+                  src="maletsunyane falls.jpg"
+                  alt="Illustrated mountain scene of Maletsunyane Falls"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Maletsunyane Falls</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Heritage">
+              <button type="button" class="g-btn" aria-label="Open Thaba-Bosiu photo">
+                <img
+                  src="thaba-bosiu.webp"
+                  alt="Illustrated mountain scene of Thaba-Bosiu"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Thaba-Bosiu</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Adventure">
+              <button type="button" class="g-btn" aria-label="Open Sani Pass photo">
+                <img
+                  src="sani pass.jpg"
+                  alt="Illustrated mountain scene of Sani Pass"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Sani Pass</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Nature">
+              <button type="button" class="g-btn" aria-label="Open Katse Dam photo">
+                <img
+                  src="katse dam.jpg"
+                  alt="Illustrated mountain scene of Katse Dam"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Katse Dam</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Adventure">
+              <button type="button" class="g-btn" aria-label="Open Afriski Mountain Resort photo">
+                <img
+                  src="afriski.jpg"
+                  alt="Illustrated mountain scene of Afriski Mountain Resort"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Afriski Mountain Resort</figcaption>
+            </figure>
+            <figure class="g-item wide" data-cat="Nature">
+              <button
+                type="button"
+                class="g-btn"
+                aria-label="Open Ts'ehlanyane National Park photo"
+              >
+                <img
+                  src="tsehlanyane.jpg"
+                  alt="Illustrated mountain scene of Ts'ehlanyane National Park"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Ts'ehlanyane National Park</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Nature">
+              <button
+                type="button"
+                class="g-btn"
+                aria-label="Open Sehlabathebe National Park photo"
+              >
+                <img
+                  src="sehlabathebe.jpg"
+                  alt="Illustrated mountain scene of Sehlabathebe National Park"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Sehlabathebe National Park</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Nature">
+              <button type="button" class="g-btn" aria-label="Open Bokong Nature Reserve photo">
+                <img
+                  src="bokong nature reserve.jpg"
+                  alt="Illustrated mountain scene of Bokong Nature Reserve"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Bokong Nature Reserve</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Heritage">
+              <button type="button" class="g-btn" aria-label="Open Liphofung Cave photo">
+                <img
+                  src="liphofung caves.jpg"
+                  alt="Illustrated mountain scene of Liphofung Cave"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Liphofung Cave</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Culture">
+              <button type="button" class="g-btn" aria-label="Open Malealea photo">
+                <img
+                  src="malealea landscape.png"
+                  alt="Illustrated mountain scene of Malealea"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Malealea</figcaption>
+            </figure>
+            <figure class="g-item wide" data-cat="Culture">
+              <button
+                type="button"
+                class="g-btn"
+                aria-label="Open Morija Museum and Archives photo"
+              >
+                <img
+                  src="morija moseum and archives.jpg"
+                  alt="Illustrated mountain scene of Morija Museum and Archives"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Morija Museum and Archives</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Culture">
+              <button type="button" class="g-btn" aria-label="Open Ha Kome Cave Dwellings photo">
+                <img
+                  src="kome caves.webp"
+                  alt="Illustrated mountain scene of Ha Kome Cave Dwellings"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Ha Kome Cave Dwellings</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Heritage">
+              <button type="button" class="g-btn" aria-label="Open Ha Baroana Rock Art photo">
+                <img
+                  src="baroana rock art.jpg"
+                  alt="Illustrated mountain scene of Ha Baroana Rock Art"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Ha Baroana Rock Art</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Nature">
+              <button type="button" class="g-btn" aria-label="Open Qiloane Falls photo">
+                <img
+                  src="qiloane falls.jpg"
+                  alt="Illustrated mountain scene of Qiloane Falls"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Qiloane Falls</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Adventure">
+              <button type="button" class="g-btn" aria-label="Open Thabana Ntlenyana photo">
+                <img
+                  src="thabana ntlenyane.jpg"
+                  alt="Illustrated mountain scene of Thabana Ntlenyana"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Thabana Ntlenyana</figcaption>
+            </figure>
+            <figure class="g-item wide" data-cat="Culture">
+              <button
+                type="button"
+                class="g-btn"
+                aria-label="Open Maseru and the Basotho Hat photo"
+              >
+                <img
+                  src="maseru city.webp"
+                  alt="Illustrated mountain scene of Maseru and the Basotho Hat"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Maseru and the Basotho Hat</figcaption>
+            </figure>
+            <figure class="g-item" data-cat="Nature">
+              <button type="button" class="g-btn" aria-label="Open Mohale Dam photo">
+                <img
+                  src="Mohale-Dam.webp"
+                  alt="Illustrated mountain scene of Mohale Dam"
+                  loading="lazy"
+                />
+              </button>
+              <figcaption>Mohale Dam</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <div
+        class="modal fade"
+        id="lightbox"
+        tabindex="-1"
+        aria-labelledby="lbTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+              <h2 class="modal-title h5 text-white" id="lbTitle"></h2>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="lbImg" class="img-fluid rounded" alt="" />
+            </div>
+            <div class="modal-footer border-0 justify-content-between">
+              <button id="lbPrev" class="btn btn-straw" type="button">Previous</button
+              ><span id="lbCount" aria-live="polite"></span
+              ><button id="lbNext" class="btn btn-straw" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="blanket"></div>
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <h2 class="h4 text-white">Visit Lesotho</h2>
+            <p>
+              The Kingdom in the Sky. Plan your trip to the only country in the world entirely above
+              1,000 m.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 class="h6 text-white">Pages</h3>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="accommodation.html">Accommodation</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h3 class="h6 text-white">Contact</h3>
+            <address class="mb-0">
+              Tourism Information Office<br />Kingsway Road, Maseru 100<br /><a>
+            </address>
+          </div>
+        </div>
+        <p class="small mt-4 mb-0">
+          &copy; <span id="year"></span> Visit Lesotho.</p>
+      </div>
+    </footer>
+    <button id="toTop" class="btn btn-straw" type="button" aria-label="Back to top" hidden>
+      Top
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Visit Lesotho</title>
+    <meta
+      name="description"
+      content="Plan a trip to Lesotho: waterfalls, rock art, pony trekking and snow in the Kingdom in the Sky."
+    />
+    <script src="js/theme.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2 family=Fraunces:opsz,wght@9..144,800&family=Public+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Visit <span>Lesotho</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="accommodation.html">Accommodation</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Explore by type</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="destinations.html?cat=Nature">Nature</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Heritage">Heritage</a>
+                  </li>
+                  <li><a class="dropdown-item" href="destinations.html?cat=Culture">Culture</a></li>
+                  <li>
+                    <a class="dropdown-item" href="destinations.html?cat=Adventure">Adventure</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <span id="navUser" class="badge text-bg-warning ms-lg-2 d-none"></span>
+              </li>
+              <li class="nav-item">
+                <button
+                  id="themeBtn"
+                  class="btn btn-sm btn-outline-light ms-lg-3 my-2 my-lg-0"
+                  type="button"
+                  aria-pressed="false"
+                >
+                  Dark
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <p id="greeting" class="mb-2 fw-semibold"></p>
+          <h1>Lesotho, the Kingdom in the Sky</h1>
+          <p class="lead mb-4">
+            Every metre of this country sits above 1,000 m. Come for the waterfalls, rock art, pony
+            trails and winter snow.
+          </p>
+          <form id="heroSearch" class="input-group" action="destinations.html" role="search">
+            <label class="visually-hidden" for="hq">Search destinations</label
+            ><input
+              id="hq"
+              name="q"
+              type="search"
+              class="form-control form-control-lg"
+              placeholder="Try Sani Pass or waterfall"
+            /><button class="btn btn-straw btn-lg" type="submit">Find places</button>
+          </form>
+        </div>
+        <div class="blanket"></div>
+      </section>
+      <section class="pb-0">
+        <div class="container">
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Snow season:</strong> Afriski usually opens from June to August. Pack warm
+            layers and check road conditions on Sani Pass.<button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="featH">
+        <div class="container">
+          <h2 id="featH" class="mb-4">Start with these three</h2>
+          <div
+            id="heroCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            aria-label="Featured destinations"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button
+              ><button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button
+              ><button
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="maletsunyane falls.jpg"
+                  class="d-block w-100"
+                  alt="Illustrated mountain landscape for Maletsunyane Falls"
+                />
+                <div class="carousel-caption">
+                  <h3 class="h5 text-white">Maletsunyane Falls</h3>
+                  <p class="mb-0">A 192 m drop, and the longest commercial abseil on Earth.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="sani pass.jpg"
+                  class="d-block w-100"
+                  alt="Illustrated mountain landscape for Sani Pass"
+                />
+                <div class="carousel-caption">
+                  <h3 class="h5 text-white">Sani Pass</h3>
+                  <p class="mb-0">Southern Africa's highest road, best driven in a 4x4.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="thaba-bosiu.webp"
+                  class="d-block w-100"
+                  alt="Illustrated mountain landscape for Thaba-Bosiu"
+                />
+                <div class="carousel-caption">
+                  <h3 class="h5 text-white">Thaba-Bosiu</h3>
+                  <p class="mb-0">Where the Basotho nation began.</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Previous</span></button
+            ><button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span
+              ><span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="about" aria-labelledby="aboutH">
+        <div class="container">
+          <div class="row g-5">
+            <article class="col-lg-7">
+              <h2 id="aboutH">About Lesotho</h2>
+              <p>
+                Lesotho is a small mountain kingdom completely surrounded by South Africa. Its
+                lowest point is 1,400 m above sea level, which is why people call it the Kingdom in
+                the Sky.
+              </p>
+              <p>
+                The Basotho people are known for the woollen blanket worn across the shoulders, the
+                straw hat called the mokorotlo, and a strong tradition of horse riding. Villages are
+                often reached on foot or by pony, so a visit here is slow and personal.
+              </p>
+              <h3 class="h5">What you can do here</h3>
+              <ul>
+                <li>Hike to waterfalls and high mountain passes</li>
+                <li>See San rock art and the cave dwellings at Ha Kome</li>
+                <li>Ski in winter and trek by pony in summer</li>
+                <li>Stay in village lodges and hear local choirs</li>
+              </ul>
+              <a class="btn btn-brand" href="destinations.html">Browse all destinations</a>
+            </article>
+            <aside class="col-lg-5" aria-label="Quick facts">
+              <h3 class="h5">Quick facts</h3>
+              <ul class="facts">
+                <li><span>Capital</span><strong>Maseru</strong></li>
+                <li><span>Currency</span><strong>Loti (LSL)</strong></li>
+                <li><span>Languages</span><strong>Sesotho, English</strong></li>
+                <li><span>Highest peak</span><strong>Thabana Ntlenyana, 3,482 m</strong></li>
+                <li><span>Districts</span><strong>10</strong></li>
+              </ul>
+              <span class="badge text-bg-success">Safe for solo travellers</span>
+              <span class="badge text-bg-warning">Cold nights</span>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="picksH">
+        <div class="container">
+          <h2 id="picksH" class="mb-4">Traveller favourites</h2>
+          <div id="featured" class="row g-4"><p class="muted">Loading destinations...</p></div>
+        </div>
+      </section>
+      <section aria-labelledby="faqH">
+        <div class="container">
+          <h2 id="faqH" class="mb-4">Before you go</h2>
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a0"
+                  aria-expanded="true"
+                  aria-controls="a0"
+                >
+                  Do I need a visa?
+                </button>
+              </h3>
+              <div id="a0" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Many nationalities can enter visa-free for short stays. Check the rules for your
+                  passport with the Lesotho embassy before you travel.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a1"
+                  aria-expanded="false"
+                  aria-controls="a1"
+                >
+                  What money should I bring?
+                </button>
+              </h3>
+              <div id="a1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  The currency is the Loti (LSL), pegged one to one with the South African rand,
+                  which most places also accept. Carry cash for remote villages.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a2"
+                  aria-expanded="false"
+                  aria-controls="a2"
+                >
+                  When is the best time to visit?
+                </button>
+              </h3>
+              <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Summer (Oct - Mar) is green and warm with waterfalls at full flow. Winter (Jun -
+                  Aug) brings snow and skiing. Nights are cold all year.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a3"
+                  aria-expanded="false"
+                  aria-controls="a3"
+                >
+                  How do I get there?
+                </button>
+              </h3>
+              <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Most visitors drive or fly into Maseru via Johannesburg or Bloemfontein. Mountain
+                  roads need care, and a 4x4 is best for Sani Pass and remote parks.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="blanket"></div>
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-md-5">
+            <h2 class="h4 text-white">Visit Lesotho</h2>
+            <p>
+              The Kingdom in the Sky. Plan your trip to the only country in the world entirely above
+              1,000 m.
+            </p>
+          </div>
+          <div class="col-6 col-md-3">
+            <h3 class="h6 text-white">Pages</h3>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="accommodation.html">Accommodation</a></li>
+              <li><a href="activities.html">Activities</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h3 class="h6 text-white">Contact</h3>
+            <address class="mb-0">
+              Tourism Information Office<br />Kingsway Road, Maseru 100<br /><a>
+            </address>
+          </div>
+        </div>
+        <p class="small mt-4 mb-0">
+          &copy; <span id="year"></span> Visit Lesotho.</p>
+      </div>
+    </footer>
+    <button id="toTop" class="btn btn-straw" type="button" aria-label="Back to top" hidden>
+      Top
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
